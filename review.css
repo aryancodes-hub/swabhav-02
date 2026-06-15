@@ -1,0 +1,88 @@
+
+    /* ─── Reset & Base ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --charcoal:  #1C1C1E;
+      --ivory:     #F5EDD6;
+      --ember:     #E8621A;
+      --teal:      #2A7B6F;
+      --sand:      #C9B99A;
+      --dark-teal: #1D5549;
+      --white:     #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--charcoal);
+      color: var(--ivory);
+      overflow-x: hidden;
+    }
+
+   
+    
+    /* ─── Reviews ───────────────────────────────────── */
+    #reviews {
+      background: var(--charcoal);
+      text-align: center;
+    }
+
+    #reviews .section-heading { color: var(--ivory); }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.8rem;
+      margin-top: 3rem;
+    }
+
+    .review-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,185,154,0.15);
+      padding: 2rem;
+      text-align: left;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .review-card:hover {
+      border-color: var(--ember);
+      transform: translateY(-5px);
+    }
+
+    .stars { color: var(--ember); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+
+    .review-card blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-style: italic;
+      line-height: 1.8;
+      color: var(--sand);
+      margin-bottom: 1.4rem;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .reviewer-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--ember);
+    }
+
+    .reviewer-name {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--ivory);
+    }
+
+    .reviewer-location {
+      font-size: 0.75rem;
+      color: var(--sand);
+      margin-top: 2px;
+    }
